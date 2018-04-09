@@ -24,7 +24,7 @@
 
 ### To train previous/new models for gender classification:
 
-* Download the imdb_crop.tar file from [here](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/) (It's the 7GB button with the tittle Download faces only).
+* Download the imdb_crop.tar file from [here](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/) (It's the 7GB button with the title Download faces only).
 
 * Move the downloaded file to the datasets directory inside this repository.
 
