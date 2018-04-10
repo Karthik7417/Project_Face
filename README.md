@@ -3,7 +3,7 @@
 * fer2013 emotion classification test accuracy: 66%.
 
 
-## Instructions
+## Instructions for Emotion Recognition + Gender Recognition
 
 ### Run real-time emotion demo:
 > python3 video_emotion_color_demo.py
@@ -34,3 +34,10 @@
 * Run the train_gender_classification.py file
 > python3 train_gender_classifier.py
 
+##Instructions for Head Orientation Detection
+
+###Research Paper
+Patacchiola, M., & Cangelosi, A. (2017). *Head pose estimation in the wild using Convolutional Neural Networks and adaptive gradient methods*. Pattern Recognition, http://dx.doi.org/10.1016/j.patcog.2017.06.009.
+
+### Run real-time head-pose detection demo:
+> python3 head_pose_estimation_webcam.py
