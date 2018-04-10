@@ -1,5 +1,4 @@
-# Real-time face detection and emotion/gender classification using fer2013/IMDB datasets with a keras CNN model and openCV.
-# Head-pose detection to measure roll, pitch & yaw
+# Real-time face detection and emotion/gender classification using fer2013/IMDB datasets &  Head-pose detection to measure roll, pitch & yaw using a keras CNN model and openCV3
 
 * IMDB gender classification test accuracy: 96%.
 * fer2013 emotion classification test accuracy: 66%.
