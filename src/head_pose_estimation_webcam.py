@@ -2,7 +2,6 @@
 
 ##
 #
-# This is an example of head pose estimation with solvePnP.
 # It uses the dlib library and openCV
 #
 
@@ -39,14 +38,14 @@ P3D_RIGHT_EYE = numpy.float32([-20.0, -65.5,-5.0]) #36
 P3D_RIGHT_TEAR = numpy.float32([-10.0, -40.5,-5.0]) #39
 P3D_LEFT_TEAR = numpy.float32([-10.0, 40.5,-5.0]) #42
 P3D_LEFT_EYE = numpy.float32([-20.0, 65.5,-5.0]) #45
-#P3D_LIP_RIGHT = numpy.float32([-20.0, 65.5,-5.0]) #48
-#P3D_LIP_LEFT = numpy.float32([-20.0, 65.5,-5.0]) #54
+P3D_LIP_RIGHT = numpy.float32([-20.0, 65.5,-5.0]) #48
+P3D_LIP_LEFT = numpy.float32([-20.0, 65.5,-5.0]) #54
 P3D_STOMION = numpy.float32([10.0, 0.0, -75.0]) #62
 
 #The points to track
 #These points are the ones used by PnP
 # to estimate the 3D pose of the face
-TRACKED_POINTS = (0, 4, 8, 12, 16, 17, 26, 27, 30, 33, 36, 39, 42, 45, 62)
+TRACKED_POINTS = (0, 4, 8, 12, 16, 17, 26, 27, 30, 33, 36, 39, 42, 45, 48, 54, 62)
 ALL_POINTS = list(range(0,68)) #Used for debug only
 
 
@@ -61,8 +60,8 @@ def main():
         print("The video source has been opened correctly...")
 
     #Create the main window and move it
-    cv2.namedWindow('Video')
-    cv2.moveWindow('Video', 20, 20)
+    cv2.namedWindow('Video_Capture')
+    cv2.moveWindow('Video_Capture', 20, 20)
 
     #Obtaining the CAM dimension
     cam_w = int(video_capture.get(3))
@@ -119,6 +118,8 @@ def main():
                                   P3D_RIGHT_TEAR,
                                   P3D_LEFT_TEAR,
                                   P3D_LEFT_EYE,
+                                  P3D_LIP_RIGHT,
+                                  P3D_LIP_LEFT,
                                   P3D_STOMION])
 
     #Declaring the two classifiers
@@ -312,7 +313,7 @@ def main():
 
         #Showing the frame and waiting
         # for the exit command
-        cv2.imshow('Video', frame)
+        cv2.imshow('Video_Capture', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'): break
    
     #Release the camera
